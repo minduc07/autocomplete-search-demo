@@ -1,0 +1,60 @@
+<ts-card tsVerticalSpacing>
+
+  <h2>Date</h2>
+
+<pre tsVerticalSpacing>
+Date:
+{{ date }}
+
+Date String:
+{{ dateString }}
+</pre>
+
+  <div tsVerticalSpacing>
+    <strong>
+      short (default)
+    </strong>
+    {{ date | tsDate }}
+  </div>
+
+  <div tsVerticalSpacing>
+    <strong>
+      medium (using date string)
+    </strong>
+    {{ dateString | tsDate:'medium' }}
+  </div>
+
+  <div tsVerticalSpacing>
+    <strong>
+      extended
+    </strong>
+    {{ date | tsDate:'extended' }}
+  </div>
+
+  <div tsVerticalSpacing>
+    <strong>
+      timestamp
+    </strong>
+    {{ date | tsDate:'timestamp' }}
+  </div>
+
+</ts-card>
+
+
+<ts-card tsVerticalSpacing>
+
+  <h2>TimeAgo</h2>
+
+<pre tsVerticalSpacing>
+Date:
+{{ date }}
+
+Old date:
+{{ oldDate }}
+</pre>
+
+  <div tsVerticalSpacing>
+    {{ date | tsTimeAgo:oldDate }} since I did any work
+  </div>
+
+</ts-card>

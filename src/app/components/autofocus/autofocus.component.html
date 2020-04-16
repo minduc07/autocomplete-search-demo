@@ -1,0 +1,50 @@
+<ts-card tsVerticalSpacing="large--2" style="max-width: 40rem">
+
+  <ng-container *ngIf="example === 'default'">
+    <h3 tsCardTitle><pre>tsAutofocus</pre></h3>
+
+    <input type="text" tsAutofocus />
+  </ng-container>
+
+
+  <ng-container *ngIf="example === 'bindingTrue'">
+    <h3 tsCardTitle><pre>[tsAutofocus]="true"</pre></h3>
+
+    <input type="text" [tsAutofocus]="true" />
+  </ng-container>
+
+
+  <ng-container *ngIf="example === 'bindingString'">
+    <h3 tsCardTitle><pre>[tsAutofocus]="'my string'"</pre></h3>
+
+    <input type="text" [tsAutofocus]="'my string'" />
+  </ng-container>
+
+
+  <ng-container *ngIf="example === 'emptyString'">
+    <h3 tsCardTitle><pre>tsAutofocus=""</pre></h3>
+
+    <input type="text" tsAutofocus="" />
+  </ng-container>
+
+
+  <ng-container *ngIf="example === 'bindingFalse'">
+    <h3 tsCardTitle><pre>tsAutofocus="false"</pre></h3>
+
+    <input type="text" tsAutofocus="false" />
+  </ng-container>
+
+  <ng-container *ngIf="!example">
+    <h3 tsCardTitle>Please select from the menu below</h3>
+  </ng-container>
+
+</ts-card>
+
+<div style="max-width: 20rem">
+  <ts-select
+    [(ngModel)]="example"
+    [items]="items"
+    label="Change binding example"
+    valueKey="value"
+  ></ts-select>
+</div>
